@@ -4,7 +4,7 @@ Use
 to find if is there has a zsh?If not,to install one by
 	sudo apt-get install zsh
 
-# 2.Switch shells
+# 2.Default shell
 	chsh -s /bin/zsh
 
 # 3.Configure oh_my_zsh
@@ -37,3 +37,7 @@ alias -s gz='tar -xzvf'
 alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
+
+## 3.4 plugins
+
+reference:http://zhuanlan.zhihu.com/mactalk/19556676
