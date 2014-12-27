@@ -39,5 +39,14 @@ alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
 
 ## 3.4 plugins
+plugins=(git ruby autojump)
+
+### 3.4.1 install autojump
+
+	git clone git://github.com/joelthelion/autojump.git
+
+Run the installation script and follow on screen instructions.
+	cd autojump
+	./install.py or ./uninstall.py
 
 reference:http://zhuanlan.zhihu.com/mactalk/19556676
