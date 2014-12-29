@@ -142,4 +142,6 @@ I recommend reading the docs of these plugins to understand them better. Each of
     十一、修改文件格式
     :set fileformat=unix   //将文件修改为unix格式，如win下面的文本文件在linux下会出现^M。
 
+# 5.ctags
 
+sudo apt-get install exuberant-ctags
