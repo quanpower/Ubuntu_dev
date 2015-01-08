@@ -40,7 +40,35 @@ system settings - network - network proxy
     proxychains <程序名>
 
 即可让程序使用代理。
-    
+# 4.Another EC2 SSH proxy example
+## Installing Tinyproxy
+
+Tinyproxy is a small and fast HTTP/HTTPS proxy server daemon.
+
+Connect to your instance using the key pair you downloaded:
+
+    ssh -i ~/.ssh/kp-ergo-proxy.pem ubuntu@ec2-54-242-82-159.compute-1.amazonaws.com
+
+Install Tinyproxy
+
+    sudo apt-get install tinyproxy
+
+        By default Tinyproxy listens on port 8888 and only accepts local connections. This is not a problem since we will be tunneling in via SSH.
+
+##Tunneling
+
+Open your terminal and start digging.
+
+    ssh -L 3128:localhost:8888 -N -i ~/.ssh/kp-ergo-proxy.pem ubuntu@ec2-54-242-82-159.compute-1.amazonaws.com
+
+    -L port:host:host-port Specifies that the given port on the local (client) host is to be forwarded to the given host and host-port on the remote box.
+    -N Do not execute any remote commands.
+
+The above command can be added to either your .bashrc or .zshrc as an alias.
+    .zshrc
+
+    alias proxystart="ssh -L 3128:localhost:8888 -N -i ~/.ssh/kp-ergo-proxy.pem ubuntu@ec2-54-242-82-159.compute-1.amazonaws.com"
+
 # [后记]
     当然终端下使用http代理并不需要使用ubuntu系统自带的全局代理工具,直接
 
