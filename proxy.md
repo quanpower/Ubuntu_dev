@@ -44,8 +44,16 @@ system settings - network - network proxy
 # [后记]
     当然终端下使用http代理并不需要使用ubuntu系统自带的全局代理工具,直接
 
-    export http_proxy="http://127.0.0.1:8084"wget www.google.com
+    export http_proxy="http://127.0.0.1:3128"wget www.google.com
 
-    #访问https加密的需要设置https_proxy变量export https_proxy="http://127.0.0.1:8084"wget https://www.google.com
+    #访问https加密的需要设置https_proxy变量export https_proxy="http://127.0.0.1:3128"wget https://www.google.com
 
-    https_proxy="http://127.0.0.1:8084"和https_proxy="https://127.0.0.1:8084"是不一样的,后者需要你的代理支持https
+    https_proxy="http://127.0.0.1:3128"和https_proxy="https://127.0.0.1:3128"是不一样的,后者需要你的代理支持https
+
+edit ~/.zshrc
+
+    export http_proxy=http://127.0.0.1:3128/
+    export https_proxy=$http_proxy
+    export ftp_proxy=$http_proxy
+    export rsync_proxy=$http_proxy
+    export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
