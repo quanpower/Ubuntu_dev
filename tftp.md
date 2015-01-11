@@ -30,6 +30,16 @@ tftpd-hpa是服务器端
 
 ## 4.测试
 
-最后tftp 127.0.0.1/localhost　
-输入get xxx
-看能否下载某个文件。
+查看69端口是否有打开 ：
+    netstat -an | more | grep udp
+
+    udp 0 0 0.0.0.0:69 0.0.0.0:*
+
+###本机测试：
+a. 在/tftproot 下新建文件1.txt   
+b. 在其他目录下测试：
+
+tftp 127.0.0.1
+tftp> get 1.txt
+Received 12 bytes in 0.0 seconds
+tftp> quit
