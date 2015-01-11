@@ -78,7 +78,7 @@ The above command can be added to either your .bashrc or .zshrc as an alias.
 
     https_proxy="http://127.0.0.1:3128"和https_proxy="https://127.0.0.1:3128"是不一样的,后者需要你的代理支持https
 
-edit ~/.zshrc
+## edit ~/.zshrc
 
     export http_proxy=http://127.0.0.1:3128/
     export https_proxy=$http_proxy
