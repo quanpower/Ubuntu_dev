@@ -20,9 +20,10 @@ tftpd-hpa是服务器端
 
     TFTP_ADDRESS=”0.0.0.0:69″
 
-    TFTP_DIRECTORY=”tftp根目录” #服务器目录,需要设置权限为777,chomd 777
+    TFTP_DIRECTORY=”/home/quanpower/dev/tftpboot” #服务器目录,需要设置权限为777,chomd 777
 
     TFTP_OPTIONS=”-l -c -s”
+
 
 ## 3.重新启动TFTP服务
 
