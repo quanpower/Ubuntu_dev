@@ -23,3 +23,9 @@ ok,执行安装命令：
 # 3.升级npm
    
     sudo npm install -g npm
+
+# 4.Install nodejs and npm on Armhf 
+
+    sudo apt-get install curl
+    sudo curl -sL https://deb.nodesource.com/setup | bash -
+    sudo apt-get install nodejs
