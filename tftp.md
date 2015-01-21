@@ -40,7 +40,7 @@ tftpd-hpa是服务器端
 a. 在/tftproot 下新建文件1.txt   
 b. 在其他目录下测试：
 
-tftp 127.0.0.1
-tftp> get 1.txt
-Received 12 bytes in 0.0 seconds
-tftp> quit
+    tftp 127.0.0.1
+    tftp> get 1.txt
+    Received 12 bytes in 0.0 seconds
+    tftp> quit
