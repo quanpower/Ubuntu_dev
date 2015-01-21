@@ -122,3 +122,19 @@ OR:/etc/kermit/kermrc
     6)输入"connect". 
     
     这样就传完了。
+    
+* (a)启动kermit就可以看到：      
+    # kermit
+    Connecting to /dev/ttyS0, speed 115200
+    Escape character: Ctrl-/ (ASCII 28, FS): enabled
+    Type the escape character followed by C to get back,
+    回车以下就是u-boot的命令行了。
+* (b)界面切换：
+    自动配置~/.kermrc的话，kermit启动后自动进入u-boot串口界面，按下
+    Ctrl + / ,再按c 就跳回kermit ，在kermit中输入connect就返回u-boot串口界面。
+* (c)传送文件：
+    kermit中输入connect后，跳到u-boot串口界面。
+    输入loadb 0x0c008000 回车
+    按下 ctrl + / ，再按c,切换到kermit。
+    输入命令：send /home/zImage
+    kermit开始传送数据了，并可以看到传送进度，发送完后，输入c,再回到u-boot界面，然后，再输入：go 0x0c008000      内核开始运行了。
