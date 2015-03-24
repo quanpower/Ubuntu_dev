@@ -6,11 +6,11 @@
 
 ##方法/步骤
 
-    ###下载JDK 1.8
+###下载JDK 1.8
 
     打开http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html  下载最新的JDK安装文件
     
-    ###ubuntu14.04安装配置jdk1.8.0_25
+###ubuntu14.04安装配置jdk1.8.0_25
 
     找到你下载文件的目录，使用下面的命令我的是用firefox下载的，在下载文件夹敲命令sudo tar zxvf  jdk-8u25-linux-x64.tar.gz  -C  /usr/lib/jvm
 
@@ -22,11 +22,11 @@
 
     在文本编辑器最后添加如下的语句
 
-`#set java environment
-export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_25  
-export JRE_HOME=${JAVA_HOME}/jre  
-export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib  
-export PATH=${JAVA_HOME}/bin:$PATH` 
+    `#set java environment
+    export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_25  
+    export JRE_HOME=${JAVA_HOME}/jre  
+    export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib  
+    export PATH=${JAVA_HOME}/bin:$PATH` 
 
     保存退出，下面输入以下命令配置默认JDK版本
 
